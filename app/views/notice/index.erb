@@ -1,0 +1,16 @@
+<form action="/create" method="post">
+	<h1>과목</h1>
+	<select name="subject">
+		<% @subject.each do |subject| %>
+			<option value="<%=subject %>"><%=subject%></option>
+		<% end %>
+ 	</select>
+	<h1>제목</h1>
+	<input type="text" name="title">
+	<h1>내용</h1>
+	<input type="text" name="description">
+	<button type="submit">
+		게시글 올리기
+	</button>
+</form>
+
