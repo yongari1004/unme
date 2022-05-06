@@ -26719,3 +26719,59 @@ Processing by NoticeController#home as HTML
 Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-5.2.7.1/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/?t=1651838459801" for 172.17.0.1 at 2022-05-06 12:01:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+Processing by NoticeController#first as HTML
+  Parameters: {"t"=>"1651838459801"}
+Redirected to http://testing-tesrw.run.goorm.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 12:01:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (1.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 297ms (Views: 285.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for 172.17.0.1 at 2022-05-06 12:01:05 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  Parameters: {"identification"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+Redirected to http://testing-tesrw.run.goorm.io/home
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:01:05 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (95.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 1.0ms)
+
+
