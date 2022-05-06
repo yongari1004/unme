@@ -26775,3 +26775,1296 @@ Processing by NoticeController#home as HTML
 Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 1.0ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-5.2.7.1/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/?t=1651839678918" for 172.17.0.1 at 2022-05-06 12:21:20 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+Processing by NoticeController#first as HTML
+  Parameters: {"t"=>"1651839678918"}
+Redirected to http://testing-tesrw.run.goorm.io/login
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 12:21:20 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 230ms (Views: 221.3ms | ActiveRecord: 0.8ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-5.2.7.1/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/?t=1651840896069" for 172.17.0.1 at 2022-05-06 12:41:37 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+Processing by NoticeController#first as HTML
+  Parameters: {"t"=>"1651840896069"}
+Redirected to http://testing-ddjwx.run.goorm.io/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 12:41:37 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (1.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (1.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 307ms (Views: 292.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/login" for 172.17.0.1 at 2022-05-06 12:41:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  Parameters: {"identification"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:41:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (10.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/index" for 172.17.0.1 at 2022-05-06 12:41:51 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#index as HTML
+  Rendering notice/index.erb within layouts/application
+  Rendered notice/index.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-05-06 12:41:56 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#create as HTML
+  Parameters: {"subject"=>"인공", "title"=>"132", "description"=>"1231"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:46
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "writer", "password", "subject", "time") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "132"], ["description", "1231"], ["writer", "1"], ["password", "1"], ["subject", "인공"], ["time", "2022-05-06 12:41:56"]]
+  ↳ app/controllers/notice_controller.rb:46
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:46
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 65ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:41:56 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/update/7" for 172.17.0.1 at 2022-05-06 12:47:02 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#update as HTML
+  Parameters: {"postId"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:52
+  Rendering notice/update.erb within layouts/application
+  Rendered notice/update.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/update_action" for 172.17.0.1 at 2022-05-06 12:47:04 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#update_action as HTML
+  Parameters: {"subject"=>"언매", "title"=>"sdfsdf", "description"=>"sdfsdf", "id"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:63
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "subject" = ?, "time" = ? WHERE "posts"."id" = ?[0m  [["subject", "언매"], ["time", "2022-05-06 12:47:04"], ["id", 7]]
+  ↳ app/controllers/notice_controller.rb:63
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:63
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 27ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:47:04 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:53:18 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (3.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:53:19 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (2.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 100.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:54:06 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:54:36 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/index" for 172.17.0.1 at 2022-05-06 12:54:52 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#index as HTML
+  Rendering notice/index.erb within layouts/application
+  Rendered notice/index.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-05-06 12:54:55 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#create as HTML
+  Parameters: {"subject"=>"언매", "title"=>"ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴ", "description"=>"ㅇㄴㅇㄴ"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:46
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "writer", "password", "subject", "time") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴ"], ["description", "ㅇㄴㅇㄴ"], ["writer", "1"], ["password", "1"], ["subject", "언매"], ["time", "2022-05-06 12:54:55"]]
+  ↳ app/controllers/notice_controller.rb:46
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:46
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 107ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:54:55 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (2.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/update/12" for 172.17.0.1 at 2022-05-06 12:54:58 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#update as HTML
+  Parameters: {"postId"=>"12"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:52
+  Rendering notice/update.erb within layouts/application
+  Rendered notice/update.erb within layouts/application (0.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/update_action" for 172.17.0.1 at 2022-05-06 12:55:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#update_action as HTML
+  Parameters: {"subject"=>"언매", "title"=>"ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㄴ", "description"=>"ㅇㄴㅇㄴ", "id"=>"12"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:63
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "time" = ? WHERE "posts"."id" = ?[0m  [["title", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㄴ"], ["time", "2022-05-06 12:55:00"], ["id", 12]]
+  ↳ app/controllers/notice_controller.rb:63
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:63
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 80ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:55:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:55:47 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:55:48 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:23
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:08 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:24 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (2.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/delete/12" for 172.17.0.1 at 2022-05-06 12:58:36 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (0.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (25.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 31ms (ActiveRecord: 25.9ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:37 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/delete/6" for 172.17.0.1 at 2022-05-06 12:58:38 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (24.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 68ms (ActiveRecord: 24.9ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:38 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (2.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/delete/7" for 172.17.0.1 at 2022-05-06 12:58:39 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (25.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 113ms (ActiveRecord: 25.5ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:39 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/delete/10" for 172.17.0.1 at 2022-05-06 12:58:40 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (82.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 86ms (ActiveRecord: 83.3ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/delete/11" for 172.17.0.1 at 2022-05-06 12:58:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 29ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (2.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 12:58:46 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 172.17.0.1 at 2022-05-06 12:58:47 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  Parameters: {"identification"=>"2", "password"=>"[FILTERED]"}
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:47 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/delete/8" for 172.17.0.1 at 2022-05-06 12:58:49 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"8"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (30.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 40ms (ActiveRecord: 30.6ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:49 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/delete/9" for 172.17.0.1 at 2022-05-06 12:58:50 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#delete as HTML
+  Parameters: {"postId"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[36mPost Destroy (88.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/notice_controller.rb:72
+  [1m[35m (94.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:72
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 187ms (ActiveRecord: 182.9ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:58:51 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 12:59:29 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 172.17.0.1 at 2022-05-06 12:59:31 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  Parameters: {"identification"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:59:31 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (2.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/index" for 172.17.0.1 at 2022-05-06 12:59:32 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#index as HTML
+  Rendering notice/index.erb within layouts/application
+  Rendered notice/index.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-05-06 12:59:35 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#create as HTML
+  Parameters: {"subject"=>"언매", "title"=>"213123", "description"=>"123123"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:46
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "writer", "password", "subject", "time") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "213123"], ["description", "123123"], ["writer", "1"], ["password", "1"], ["subject", "언매"], ["time", "2022-05-06 12:59:35"]]
+  ↳ app/controllers/notice_controller.rb:46
+  [1m[35m (23.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:46
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 37ms (ActiveRecord: 24.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 12:59:35 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:00:27 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/update/13" for 172.17.0.1 at 2022-05-06 13:00:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#update as HTML
+  Parameters: {"postId"=>"13"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:52
+  Rendering notice/update.erb within layouts/application
+  Rendered notice/update.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/update_action" for 172.17.0.1 at 2022-05-06 13:00:44 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#update_action as HTML
+  Parameters: {"subject"=>"미적", "title"=>"213123", "description"=>"123123", "id"=>"13"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notice_controller.rb:63
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "subject" = ?, "time" = ? WHERE "posts"."id" = ?[0m  [["subject", "미적"], ["time", "2022-05-06 13:00:44"], ["id", 13]]
+  ↳ app/controllers/notice_controller.rb:63
+  [1m[35m (21.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notice_controller.rb:63
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 50ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:00:44 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:01:54 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:02:21 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:02:28 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:02:40 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:02:50 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/read/13" for 172.17.0.1 at 2022-05-06 13:02:53 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#read as HTML
+  Parameters: {"postId"=>"13"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:68
+  Rendering notice/read.erb within layouts/application
+  Rendered notice/read.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:02:54 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-5.2.7.1/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:25:39 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+Processing by NoticeController#home as HTML
+Redirected to http://testing-ddjwx.run.goorm.io/login
+Completed 302 Found in 79ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 13:25:39 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 166ms (Views: 159.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 172.17.0.1 at 2022-05-06 13:25:42 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  Parameters: {"identification"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:25:43 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (7.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/db" for 172.17.0.1 at 2022-05-06 13:36:24 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (5.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (4.9ms)
+Completed 200 OK in 188ms (Views: 180.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/db/tables/accounts/data" for 172.17.0.1 at 2022-05-06 13:36:26 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"accounts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "accounts"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (174.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (92.6ms)
+  [1m[36m Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (389.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (397.9ms)
+Completed 200 OK in 514ms (Views: 472.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/rails/db/data-table" for 172.17.0.1 at 2022-05-06 13:36:29 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#data_table as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/data_table.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/data_table.html.erb within layouts/rails_db/application (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (4.8ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/db/" for 172.17.0.1 at 2022-05-06 13:36:31 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (25.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (9.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (6.7ms)
+Completed 200 OK in 256ms (Views: 252.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/db/tables/accounts/data" for 172.17.0.1 at 2022-05-06 13:36:33 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"accounts"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "accounts"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (98.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (6.6ms)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (295.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (301.1ms)
+Completed 200 OK in 490ms (Views: 311.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/rails/db/sql?sql=select+%2A+from+accounts+limit+10" for 172.17.0.1 at 2022-05-06 13:36:36 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#index as HTML
+  Parameters: {"sql"=>"select * from accounts limit 10"}
+  [1m[35m (0.2ms)[0m  [1m[34mselect * from accounts limit 10[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mEXPLAIN select * from accounts limit 10[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_history.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_explain.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_results.html.erb (4.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (17.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (3.8ms)
+Completed 200 OK in 172ms (Views: 118.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/rails/db/execute" for 172.17.0.1 at 2022-05-06 13:37:03 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#execute as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ws+LNklVFlD0frPBhXa7npCqxIJ2A7ErG74IUYZjmgLXitGScAM7nDKfJvq/meZh1z8mve/lbCeB8K3Q5K1h5w==", "sql"=>"DELIMITER $$ \r\nCREATE PROCEDURE myFunction() \r\nBEGIN\r\n    DECLARE i INT DEFAULT 1; \r\n    WHILE (i <= 10) DO\r\n        INSERT INTO `account` VALUE (i); -- \r\n        SET i = i + 1; \r\n    END WHILE;\r\nEND$$\r\nDELIMITER ; ", "commit"=>"→ Execute"}
+  [1m[35m (0.3ms)[0m  [1m[35mDELIMITER $$ 
+CREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END$$
+DELIMITER ;[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mEXPLAIN DELIMITER $$ 
+CREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END$$
+DELIMITER ;[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_history.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_explain.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_results.html.erb (4.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (47.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (3.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (77.5ms)
+Completed 200 OK in 246ms (Views: 242.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/rails/db/execute" for 172.17.0.1 at 2022-05-06 13:37:21 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#execute as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KNCkT6zwMWF3srjDxFJQXusunTwojYlhDpD8QixQKUU9lf7rlaYcrbFTLfj+vQ2hrLt/A7FrVG2U3lnDTp7SoA==", "sql"=>"\r\nCREATE PROCEDURE myFunction() \r\nBEGIN\r\n    DECLARE i INT DEFAULT 1; \r\n    WHILE (i <= 10) DO\r\n        INSERT INTO `account` VALUE (i); -- \r\n        SET i = i + 1; \r\n    END WHILE;\r\nEND$$\r\n", "commit"=>"→ Execute"}
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END$$[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mEXPLAIN CREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END$$[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_history.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_explain.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_results.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (72.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (4.4ms)
+Completed 200 OK in 182ms (Views: 178.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/rails/db/execute" for 172.17.0.1 at 2022-05-06 13:37:23 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#execute as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"muz6PBp3SN0Z3J53eUEk17Fot6I5WdxYPwCOg2OsCPuPqaCYIyFlEd89C0xDrnko9v1VnaC/AVSlTisCAWLzHg==", "sql"=>"CREATE PROCEDURE myFunction() \r\nBEGIN\r\n    DECLARE i INT DEFAULT 1; \r\n    WHILE (i <= 10) DO\r\n        INSERT INTO `account` VALUE (i); -- \r\n        SET i = i + 1; \r\n    END WHILE;\r\nEND$$", "commit"=>"→ Execute"}
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END$$[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mEXPLAIN CREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END$$[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_history.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_explain.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_results.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (11.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (3.5ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/rails/db/execute" for 172.17.0.1 at 2022-05-06 13:37:32 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#execute as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l6e3w64M7NaVx86lKFWOlJ/eTkylXqAfD8lL+emkl7yC4u1nl1rBGlMmW54SutNr2Eusczy4fROVh+54i2psWQ==", "sql"=>"CREATE PROCEDURE myFunction() \r\nBEGIN\r\n    DECLARE i INT DEFAULT 1; \r\n    WHILE (i <= 10) DO\r\n        INSERT INTO `account` VALUE (i); -- \r\n        SET i = i + 1; \r\n    END WHILE;\r\nEND\r\n", "commit"=>"→ Execute"}
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mEXPLAIN CREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_history.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_explain.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_results.html.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (77.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (76.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (7.2ms)
+Completed 200 OK in 283ms (Views: 277.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/rails/db/execute" for 172.17.0.1 at 2022-05-06 13:37:33 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#execute as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OCltkeKmdeMMb7sqmzLb0oAnKro2CXSn803RDSv9X5AtbDc12/BYL8qOLhGh3YYtx7LIha/vqatpA3SMSTOkdQ==", "sql"=>"CREATE PROCEDURE myFunction() \r\nBEGIN\r\n    DECLARE i INT DEFAULT 1; \r\n    WHILE (i <= 10) DO\r\n        INSERT INTO `account` VALUE (i); -- \r\n        SET i = i + 1; \r\n    END WHILE;\r\nEND", "commit"=>"→ Execute"}
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mEXPLAIN CREATE PROCEDURE myFunction() 
+BEGIN
+    DECLARE i INT DEFAULT 1; 
+    WHILE (i <= 10) DO
+        INSERT INTO `account` VALUE (i); -- 
+        SET i = i + 1; 
+    END WHILE;
+END[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_history.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_explain.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/_results.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (52.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (74.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (4.1ms)
+Completed 200 OK in 162ms (Views: 159.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/db/tables/accounts/data" for 172.17.0.1 at 2022-05-06 13:37:37 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"accounts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "accounts"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (7.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (13.6ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (200.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (204.3ms)
+Completed 200 OK in 258ms (Views: 237.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:39:52 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/db" for 172.17.0.1 at 2022-05-06 13:39:57 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (3.5ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/db/tables/ar_internal_metadata/data" for 172.17.0.1 at 2022-05-06 13:39:58 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"ar_internal_metadata"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ar_internal_metadata"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (75.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (7.8ms)
+  [1m[36m Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (207.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (210.6ms)
+Completed 200 OK in 237ms (Views: 216.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/db/tables/accounts/data" for 172.17.0.1 at 2022-05-06 13:39:59 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"accounts"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "accounts"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (6.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (5.5ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (184.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (187.5ms)
+Completed 200 OK in 213ms (Views: 192.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/rails/db/tables/posts/data" for 172.17.0.1 at 2022-05-06 13:40:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"posts"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (9.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (8.9ms)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (206.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (209.8ms)
+Completed 200 OK in 236ms (Views: 215.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/rails/db/tables/accounts/data" for 172.17.0.1 at 2022-05-06 13:40:12 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"accounts"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "accounts"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (7.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (77.5ms)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (69.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (193.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (195.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (73.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (3.8ms)
+Completed 200 OK in 322ms (Views: 232.3ms | ActiveRecord: 71.5ms)
+
+
+Started GET "/rails/db/tables/ar_internal_metadata/data" for 172.17.0.1 at 2022-05-06 13:40:13 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"ar_internal_metadata"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ar_internal_metadata"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (10.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (9.5ms)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.7.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (88.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (296.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (299.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (78.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (3.7ms)
+Completed 200 OK in 537ms (Views: 494.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/?t=1651844415968" for 172.17.0.1 at 2022-05-06 13:40:16 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#first as HTML
+  Parameters: {"t"=>"1651844415968"}
+Redirected to http://testing-ddjwx.run.goorm.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.17.0.1 at 2022-05-06 13:40:16 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+  Rendering notice/login.erb within layouts/application
+  Rendered notice/login.erb within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 172.17.0.1 at 2022-05-06 13:40:22 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#login as HTML
+  Parameters: {"identification"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  ↳ app/controllers/notice_controller.rb:16
+Redirected to http://testing-ddjwx.run.goorm.io/home
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:40:22 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (2.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/read/13" for 172.17.0.1 at 2022-05-06 13:40:29 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#read as HTML
+  Parameters: {"postId"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/notice_controller.rb:68
+  Rendering notice/read.erb within layouts/application
+  Rendered notice/read.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 95.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:40:31 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (2.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 88.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 172.17.0.1 at 2022-05-06 13:42:13 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NoticeController#home as HTML
+  Rendering notice/home.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/notice/home.erb:28
+  Rendered notice/home.erb within layouts/application (1.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
