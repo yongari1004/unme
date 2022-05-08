@@ -32,6 +32,7 @@ class NoticeController < ApplicationController
 	
 	def index
 		@subject = @@subject
+		
 	end
 	
 	def create
@@ -44,7 +45,7 @@ class NoticeController < ApplicationController
 		post.writer = @@correct[0]
 		post.password = @@correct[1]
 		post.save
-		redirect_to '/home'
+		redirect_to '/home'	
 	end
 	
 	def update
@@ -72,4 +73,6 @@ class NoticeController < ApplicationController
 		Post.destroy(params[:postId])
 		redirect_to '/home'
 	end
+	
+	
 end
